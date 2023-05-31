@@ -1,6 +1,7 @@
 import "./Home.sass";
 import Header from "../../components/header/Header";
 import Banner from "../../components/banner/Banner";
+import Cards_panel from "../../components/cards-panel/Cards-panel";
 
 const Home = () => {
     const links = [
@@ -17,16 +18,7 @@ const Home = () => {
                     <Banner />
                 </section>
                 <section className='home__cards'>
-                    <h3>Um subtítulo para quem rolou até aqui!</h3>
-                    <p>
-                        Aproveite esta seção para destacar os benefícios do seu produto ou serviço. Palavras-chave
-                        ajudam no SEO.
-                    </p>
-                    <ul>
-                        <li>
-                            card1
-                        </li>
-                    </ul>
+                    <Cards_panel />
                 </section>
             </main>
         </>
