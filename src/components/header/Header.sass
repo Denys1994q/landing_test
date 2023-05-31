@@ -16,13 +16,21 @@
     flex-wrap: wrap
     align-items: center
     &__item
+        padding: .2rem
         &:not(:last-child)
             margin-right: 10rem
+        &:hover
+            background: red
+            transform: scale(1.1)
+            transition: all .4s ease
+            color: white
 .icons
     display: flex
     flex-wrap: wrap
     align-items: center
     gap: 2.4rem
     &__item
+        display: flex
+        align-items: center
         width: 2.4rem
         height: 2.8rem

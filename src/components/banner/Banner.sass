@@ -1,0 +1,45 @@
+@import '../../styles/variables/variables.sass'
+@import '../../styles/mixins/mixins.sass'
+
+.banner
+    background: #2B0955
+.banner-wrapped
+    // max-width: 96rem
+    // margin: 0 auto
+    display: flex
+    flex-wrap: wrap
+    &__text
+        padding: 6rem 0rem
+        margin-left: 24rem
+        width: 57rem
+        // background: green
+        color: $main-white
+    &__image
+        width: 43%
+        position: relative
+        @include respond($breakpoint: laptopL)
+            width: 35%
+        img
+            position: absolute
+            top: 15px
+            left: 0
+            object-fit: cover
+            width: 59rem
+            height: 55rem
+            z-index: 99
+            // @include respond($breakpoint: laptopL)
+            //     top: 0
+
+.textBlock
+    &__info
+        width: 45rem
+        font-size: 18px
+        line-height: 27px
+        letter-spacing: -0.02em
+        margin-bottom: 2.6rem
+        span
+            color: $main-yellow
+            font-weight: bold
+    &__btns
+        display: flex
+        gap: 2rem
