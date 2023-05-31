@@ -2,6 +2,7 @@ import "./Home.sass";
 import Header from "../../components/header/Header";
 import Banner from "../../components/banner/Banner";
 import Cards_panel from "../../components/cards-panel/Cards-panel";
+import About_panel from "../../components/about-panel/About-panel";
 
 const Home = () => {
     const links = [
@@ -19,6 +20,12 @@ const Home = () => {
                 </section>
                 <section className='home__cards'>
                     <Cards_panel />
+                </section>
+                <section className='home__about'>
+                    <About_panel />
+                </section>
+                <section className='home__form'>
+                    
                 </section>
             </main>
         </>
