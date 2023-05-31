@@ -31,8 +31,8 @@ const Cards_panel = () => {
                 SEO.
             </p>
             <ul className='cards-panel__list'>
-                {cards.map(card => (
-                    <li>
+                {cards.map((card, index) => (
+                    <li key={index}>
                         <Card card={card} />
                     </li>
                 ))}

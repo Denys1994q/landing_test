@@ -1,4 +1,5 @@
 @import '../../styles/variables/variables.sass'
+@import '../../styles/mixins/mixins.sass'
 
 .h2
     font-weight: 600
@@ -10,6 +11,9 @@
     position: relative
     display: block
     padding-bottom: 1.6rem
+    @include respond($breakpoint: phoneL)
+        max-width: 25rem
+        margin: 0 auto
 .h2-highlighted
     &::after
         content: ''

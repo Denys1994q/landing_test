@@ -1,0 +1,44 @@
+@import '../../styles/mixins/mixins.sass'
+
+.footer
+    background: #2B0955
+    padding: 3rem 11.9rem
+    color: #FFFFFF
+    @include respond($breakpoint: phoneL)
+        padding: 1rem
+    &__main
+        margin-top: 7.2rem
+        padding-bottom: 4.9rem
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        gap: 2.6rem
+        border-bottom: 1px solid #AE97CB
+        p
+            line-height: 21px
+        input
+            border: 1px solid #FFFFFF
+            border-radius: 6px 0px 0px 6px
+            width: 24rem
+            height: 4.5rem
+            padding: 0 1.6rem
+            background: none
+            &::placeholder
+                color: inherit
+            @include respond($breakpoint: phoneL)
+                width: 20rem
+    &__formBtn
+        width: 12rem
+        height: 4.5rem
+        background: #FFFFFF
+        border-radius: 0px 6px 6px 0px
+        color: black
+    &__infoItem
+        margin-top: 1.6rem
+        font-size: 12px
+        line-height: 18px
+        text-align: center
+        @include respond($breakpoint: phoneL)
+            max-width: 19rem
+            margin: 0 auto
+            padding: 3rem 0

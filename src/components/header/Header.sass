@@ -1,9 +1,13 @@
+@import '../../styles/mixins/mixins.sass'
+
 .header
-    padding: 0 11.9rem
     height: 7rem
     display: flex
+    flex-wrap: wrap
     align-items: center
     justify-content: space-between
+    @include respond($breakpoint: phoneL)
+        row-gap: 4rem
     &__left
     &__right
         display: flex
@@ -15,6 +19,8 @@
     &__list
     &__icons
         margin-left: 11rem
+        @include respond($breakpoint: tab-land)
+            margin-left: 1rem
 
 .list
     display: flex
@@ -24,14 +30,15 @@
         padding: .2rem
         &:not(:last-child)
             margin-right: 10rem
+            @include respond($breakpoint: phoneL)
+                margin-right: 1rem
         &:hover
-            background: red
+            background: #ddd
             transform: scale(1.1)
             transition: all .4s ease
-            color: white
+            color: black
 .icons
     display: flex
-    flex-wrap: wrap
     align-items: center
     gap: 2.4rem
     &__item
@@ -39,3 +46,7 @@
         align-items: center
         width: 2.4rem
         height: 2.8rem
+
+.burger-list
+    font-size: 1.6rem
+    font-weight: bold

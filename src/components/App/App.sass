@@ -1,0 +1,21 @@
+@import '../../styles/mixins/mixins.sass'
+
+.main-container
+    max-width: 144rem
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+.header-wrapper
+    padding: 0 11.9rem
+    position: fixed
+    width: 100%
+    max-width: 144rem
+    z-index: 99
+    background: #fff
+    @include respond($breakpoint: tab-land)
+        padding: 0 .9rem
+.main-wrapper
+    flex-grow: 1
+.footer-wrapper
+    flex-shrink: 0

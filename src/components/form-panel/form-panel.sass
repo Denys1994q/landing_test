@@ -1,3 +1,5 @@
+@import '../../styles/mixins/mixins.sass'
+
 .form-panel
     &__img
         width: 15rem
@@ -7,6 +9,8 @@
             object-fit: contain
     &__main
         margin-top: 7.5rem
+        @include respond($breakpoint: tab-port)
+            margin-top: 3.5rem
     &__textP
         max-width: 38rem
         margin-bottom: 1.6rem
@@ -28,6 +32,9 @@
         align-items: center
         gap: 1rem
         margin-top: 6rem
+        @include respond($breakpoint: phoneL)
+            margin-top: 1rem
+            margin-bottom: 4rem
 
 .form-wrapper
     display: flex
@@ -35,6 +42,8 @@
     &__info
     &__form
         margin-left: auto
+        @include respond($breakpoint: phoneL)
+            margin: 0 auto
 
 .form
     &__item
@@ -51,6 +60,8 @@
             border: 1px solid #AE97CB
             border-radius: 8px
             padding: 0 1.2rem
+            @include respond($breakpoint: phoneL)
+                width: 31rem
     &__btn
         display: flex
         justify-content: end

@@ -22,7 +22,7 @@ const Home = () => {
                     <div className='home__form'>
                         <Form_panel />
                     </div>
-                </section>
+                </section> 
             </main>
         </>
     );

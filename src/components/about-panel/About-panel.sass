@@ -1,8 +1,15 @@
+@import '../../styles/mixins/mixins.sass'
+
 .about-panel
     display: flex
     flex-wrap: wrap
+    @include respond($breakpoint: phoneL)
+        padding-left: 3rem
+        text-align: center
     &__info
         margin-right: 9rem
+        @include respond($breakpoint: phoneL)
+            margin-right: 0
 
 .info
     &__hashtag
@@ -12,6 +19,8 @@
         letter-spacing: -0.02em
         text-transform: uppercase
         margin-bottom: 1.6rem
+        @include respond($breakpoint: tab-port)
+            text-align: start
     &__heading
         width: 30rem
         font-weight: 700
@@ -20,6 +29,8 @@
         letter-spacing: -0.02em
         color: #2B0955
         margin-bottom: 1.6rem
+        @include respond($breakpoint: tab-port)
+            text-align: start
     &__text
         max-width: 44rem
         font-size: 16px
@@ -27,9 +38,13 @@
         letter-spacing: -0.02em
         color: #363636
         margin-bottom: 1.6rem
+        @include respond($breakpoint: phoneL)
+            text-align: start
         span
             color: #7000FF
             font-weight: bold
 
 .burger-shapeImg
     margin-top: -30rem
+    @include respond($breakpoint: tab-port)
+        display: none

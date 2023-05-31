@@ -1,5 +1,9 @@
+@import '../../styles/mixins/mixins.sass'
+
 .h1
     font-weight: 800
     font-size: 64px
     line-height: 88px
-    
+    @include respond($breakpoint: phoneM)
+        font-size: 48px
+        line-height: 137.5%

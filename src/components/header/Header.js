@@ -1,36 +1,47 @@
 import "./Header.sass";
-import logo from "../../imgs/nice-logo.png";
-import instagram from "../../imgs/instagram.png";
-import fb from "../../imgs/fb.png";
+import {useState, useEffect} from 'react'
+import burger from '../../imgs/burger.png'
 
-const Header = ({ links }) => {
-    const linksContent = links.map(link => (
-        <li className='list__item'>
+const Header = ({ links, logo, socialMedia, withBurger }) => {
+    const [showBurger, setShowBurger] = useState(false)
+    const [openBurger, setOpenBurger] = useState(false)
+
+    const linksContent = links.map((link, index) => (
+        <li key={index} className='list__item'>
             <a href={link.to} target='_blank'>
                 {link.title}
             </a>
         </li>
     ));
 
+    useEffect(() => {
+        if (window.innerWidth < 601) {
+            setShowBurger(true)
+        }
+    }, []);
+
     return (
+        <>
         <header className='header'>
+            {withBurger && showBurger && <img onClick={() => setOpenBurger((old) => !old)} src={burger} />}
             <div className='header__left'>
                 <a href='#' target='_blank' className='header__logo'>
                     <img src={logo} alt='nice-logo' />
                 </a>
             </div>
             <div className='header__right'>
-                <ul className='header__list list'>{linksContent}</ul>
+                <ul style={{'display': withBurger && showBurger ? 'none' : 'flex'}} className='header__list list'>{linksContent}</ul>
                 <div className='header__icons icons'>
-                    <a href='#' target='_blank' className='icons__item'>
-                        <img src={instagram} alt='instagram-icon' />
-                    </a>
-                    <a href='#' target='_blank' className='icons__item'>
-                        <img src={fb} alt='fb-icon' />
-                    </a>
+                    {
+                        socialMedia.map((item, index) => <a key={index} href={item.to} target='_blank' className='icons__item'>
+                        <img src={item.img} alt='social-media-logo' />
+                    </a>)
+                    }
                 </div>
             </div>
         </header>
+        {openBurger && <ul className='burger-list'>{linksContent}</ul>}
+        </>
     );
 };
 

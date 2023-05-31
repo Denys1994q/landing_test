@@ -6,30 +6,31 @@
 .banner-wrapped
     display: flex
     flex-wrap: wrap
+    @include respond($breakpoint: laptopL)
+        justify-content: center
     &__text
         padding: 6rem 0rem
         margin-left: 24rem
-        width: 57rem
+        max-width: 57rem
         color: $main-white
-    &__image
-        width: 43%
-        position: relative
         @include respond($breakpoint: laptopL)
-            width: 35%
+            margin-left: 4rem
+    &__image
+        position: relative
+        top: 80px
+        @include respond($breakpoint: laptopL)
+            top: 0
+        @include respond($breakpoint: phoneL)
+            top: 80px
+            margin-top: -170px
         img
-            position: absolute
-            top: 15px
-            left: 0
-            object-fit: cover
-            width: 59rem
-            height: 55rem
-            z-index: 99
-            // @include respond($breakpoint: laptopL)
-            //     top: 0
-
+            @include respond($breakpoint: phoneL)
+                height: 500px
+                width: 500px
+                object-fit: cover
 .textBlock
     &__info
-        width: 45rem
+        max-width: 45rem
         font-size: 18px
         line-height: 27px
         letter-spacing: -0.02em
@@ -39,4 +40,5 @@
             font-weight: bold
     &__btns
         display: flex
+        flex-wrap: wrap
         gap: 2rem
